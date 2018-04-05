@@ -1,0 +1,100 @@
+
+{% extends "base.html.twig" %}
+
+{% block title %}Lucky{% endblock %}
+
+{% block contenido %}
+<div class="container-fluid">
+  
+  <div class="contenido panel panel-default">
+  <div id="headerpane" class="panel-heading">INVENTARIO</div>
+  <div class="panel-body">
+
+
+<div id="ItemList" class="row">
+  
+
+  
+<div class="container">
+  <h2>Editar: {{ computer.codigo }}</h2>
+  <!--<form action="{{ absolute_url(path('edit', { 'id': computer.id })) }}" method="POST">
+    <div class="form-group">
+      <label for="serie">Serie:</label>
+      <input type="text" class="form-control" id="serie" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="marca">Marca:</label>
+      <input type="text" class="form-control" id="marca" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="codigo">Modelo:</label>
+      <input type="text" class="form-control" id="modelo" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="codigo">Codigo:</label>
+      <input type="text" class="form-control" id="codigo" placeholder="">
+    </div>
+    
+   <button type="submit" class="btn btn-default">Submit</button>
+  </form>-->
+
+
+  {{ form_start(form) }}
+
+    <div class="form-group">
+      <label for="serie">{{ 'Serie'|trans }}:</label>
+       {{ form_widget(form.serie, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+       {% if form_errors(form.serie) %}
+          {% for e in form.serie.vars.errors %}
+              <span id="serie-error" class="help-block help-block-error">{{e.message}}</span>
+          {% endfor %}
+      {% endif %}
+    </div>
+     
+     <div class="form-group">
+      <label for="marca">Marca:</label>
+       {{ form_widget(form.marca, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+    
+    </div>
+     <div class="form-group">
+      <label for="modelo">Modelo:</label>
+       {{ form_widget(form.modelo, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+   
+    </div>
+     <div class="form-group">
+      <label for="codigo">Codigo:</label>
+       {{ form_widget(form.codigo, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+    </div>
+
+     <div class="form-group">
+      <label for="categoria">Categoria:</label>
+       {{ form_widget(form.categoria, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+    </div>
+
+
+   
+
+    <button type="submit" class="btn btn-default">Submit</button>
+  
+  {{ form_end(form) }}
+
+
+</div>
+
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="/css/styles.css">
+{% endblock %}
+
+

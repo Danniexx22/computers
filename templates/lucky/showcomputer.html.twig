@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Lucky{% endblock %}
+
+{% block contenido %}
+<div class="container-fluid">
+  
+  <div class="contenido panel panel-default">
+  <div id="headerpane" class="panel-heading">INVENTARIO</div>
+  <div class="panel-body">
+
+
+<div id="ItemList" class="row">
+  
+
+  
+<div class="container">
+       <div class="col-md-2">{{ computer.id }}</div>
+       <div class="col-md-2">{{ computer.serie }}</div>
+       <div class="col-md-2">{{ computer.marca }}</div>
+       <div class="col-md-2">{{ computer.modelo }}</div>
+       <div class="col-md-2">{{ computer.codigo }}</div>
+
+       </div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+
+
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="/css/styles.css">
+{% endblock %}
+
+
+
+

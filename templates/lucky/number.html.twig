@@ -1,0 +1,162 @@
+
+{% extends "base.html.twig" %}
+
+{% block title %}Lucky{% endblock %}
+
+{% block contenido %}
+<div class="container-fluid">
+  
+  <div class="contenido panel panel-default">
+  <div id="headerpane" class="panel-heading">INVENTARIO</div>
+  <div class="panel-body">
+
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <input class="form-control" id="myInput" type="text" placeholder="Buscar...">
+
+  </div>
+  
+
+</div>
+	
+<div class="row tags">
+  <div class="col-md-10">INFORMACIÓN</div>
+  <div class="col-md-2">OPCIONES</div>
+
+</div>
+<div class="infotags col-md-10">
+     <div class="col-md-2">ID</div>
+     <div class="col-md-2">SERIE</div>
+     <div class="col-md-2">MARCA</div>
+     <div class="col-md-2">MODELO </div>
+     <div class="col-md-2">CODIGO</div>
+     <div class="col-md-2">CATEGORIA</div>
+    
+  </div>
+
+
+
+
+<div id="ItemList" class="row">
+{% for result in results %}
+    
+
+	 <div class="rowitem">
+	  
+	   <div class="infoitem col-md-10">
+	     <div class="col-md-2">{{ result.id }}</div>
+	     <div class="col-md-2">{{ result.serie }}</div>
+	     <div class="col-md-2">{{ result.marca }}</div>
+	     <div class="col-md-2">{{ result.modelo }}</div>
+	     <div class="col-md-2">{{ result.codigo }}</div>
+       <div class="col-md-2">{{ result.categoria }}</div>
+	     
+	  </div>
+
+	   <div class="col-md-2">
+	      
+	      <div class="row"><a href="{{ path('edit', { 'id': result.id }) }}" class="col-md-6 col-md-offset-3 btn btn-warning">EDITAR</a></div>
+
+         <div class="row"><a href="{{ path('mas', { 'id': result.id }) }}" class="col-md-6 col-md-offset-3 btn btn-info">VER MAS</a></div>
+	  
+	
+	       <!--<div class="row"> <button type="button" class="col-md-6 col-md-offset-3 btn btn-info">VER MAS</button></div>-->
+
+	      <div class="row"> <button type="button" class="col-md-6 col-md-offset-3 btn btn-danger eliminar" data-id="{{ result.id }}">ELIMINAR</button></div>
+	     
+	      
+	      
+	   </div>
+
+
+	 </div>
+
+{% else %}
+	
+	<div class="rowitem text-center">
+	  
+	   <div class="infoitem col-md-10">
+			Sin resultadps.	     
+	  </div>
+
+	 </div>
+
+   
+{% endfor %}
+</div>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="/css/styles.css">
+{% endblock %}
+
+
+{% block javascripts %}
+	<script>
+        $(document).ready(function() {
+
+            $("#myInput").keyup(function(){
+
+        var value=$.trim($("#myInput").val());
+       
+        if(value.length>0){
+              $("#myInput").css("background-color", "pink"); 
+                var id = $(this).val();
+                var url = "/" + id +  "/filter";
+              
+              $.post(url, function (respuesta) {
+              console.log(respuesta);
+
+              $("#ItemList").html(respuesta);
+
+              
+               }, 'html');
+
+               
+          }
+              
+
+              });
+
+
+        	$(".eliminar").on('click', function () {
+        		var id = $(this).data('id');
+        		var url = "/" + id +  "/eliminar";
+
+        		var fila = $(this).parents('.rowitem');
+
+        		$.post(url, function (respuesta) {
+        			console.log(respuesta);
+
+        			if (respuesta.ok) {
+        				fila.remove();
+        			}
+        		}, 'json');
+        	});
+
+        	$(".editar").on('click', function () {
+        		var id = $(this).data('id');
+        		var url = "/" + id +  "/edit";
+
+        		var fila = $(this).parents('.rowitem');
+
+        		$.post(url, function (respuesta) {
+        			console.log(respuesta);
+
+        			$("#contentp").html(respuesta);
+
+        			
+        		}, 'html');
+        	});
+        });
+    </script>
+{% endblock %}
+

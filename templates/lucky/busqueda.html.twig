@@ -1,0 +1,46 @@
+
+{% for result in results %}
+    
+
+	 <div class="rowitem">
+	  
+	   <div class="infoitem col-md-10">
+	     <div class="col-md-2">{{ result.id }}</div>
+	     <div class="col-md-2">{{ result.serie }}</div>
+	     <div class="col-md-2">{{ result.marca }}</div>
+	     <div class="col-md-2">{{ result.modelo }}</div>
+	     <div class="col-md-2">{{ result.codigo }}</div>
+       <div class="col-md-2">{{ result.categoria }}</div>
+	     
+	  </div>
+
+	   <div class="col-md-2">
+	      
+	      <div class="row"><a href="{{ path('edit', { 'id': result.id }) }}" class="col-md-6 col-md-offset-3 btn btn-warning">EDITAR</a></div>
+
+         <div class="row"><a href="{{ path('mas', { 'id': result.id }) }}" class="col-md-6 col-md-offset-3 btn btn-info">VER MAS</a></div>
+	  
+	
+	       <!--<div class="row"> <button type="button" class="col-md-6 col-md-offset-3 btn btn-info">VER MAS</button></div>-->
+
+	      <div class="row"> <button type="button" class="col-md-6 col-md-offset-3 btn btn-danger eliminar" data-id="{{ result.id }}">ELIMINAR</button></div>
+	     
+	      
+	      
+	   </div>
+
+
+	 </div>
+
+{% else %}
+	
+	<div class="rowitem text-center">
+	  
+	   <div class="infoitem col-md-10">
+			Sin resultados.	     
+	  </div>
+
+	 </div>
+
+   
+{% endfor %}
