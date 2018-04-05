@@ -43,15 +43,16 @@ class Computer
      *
      *@var string
      */
-    private $modelo;
+    private $codigo;
 
     /**
-     * @ORM\Column(type="string", unique=true)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Modelo", inversedBy="computadoras")
+     * @ORM\JoinColumn(nullable=false)
      * @Assert\NotBlank()
      *
      *@var string
      */
-    private $codigo;
+    private $modelo;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Categoria", inversedBy="computadoras")
@@ -86,16 +87,26 @@ public function setMarca($marca)
     return $this;
 }
 
-public function getModelo()
-{
-    return $this->modelo;
-}
+ /**
+     * @return Modelo
+     */
+    public function getmodelo()
+    {
+        return $this->modelo;
+    }
+    
+    /**
+     * @param Modelo $modelo
+     *
+     * @return static
+     */
+    public function setmodelo(Modelo $modelo)
+    {
+        $this->modelo = $modelo;
 
-public function setModelo($modelo)
-{
-    $this->modelo = $modelo;
-    return $this;
-}
+        return $this;
+    }
+
 public function getCodigo()
 {
     return $this->codigo;

@@ -17,8 +17,58 @@
 
 
 }
-#contentp{
 
-	
-}
+.boton_1{
+    
+    text-decoration: none;
+    transition: width 2s;
+
+    font-weight: 600;
+    font-size: 20px;
+    
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	  border-radius: 50%;
+  }
+  .boton_1:hover{
+    color: black;
+    background-color: #ffffff;
+    width: 200px;
+    height: 200px;
+  }
+  .delete{
+    padding-bottom: 8px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 9px;
+    background-color: #BF3737;
+    color: white;
+  }
+
+  .info{
+    padding-bottom: 8px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 9px;
+    background-color: #3EB0E7;
+    color: white;
+  }
+
+  .edit{
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 8px;
+    padding-top: 9px;
+    background-color: #E76E3E;
+    color: white;
+  }
+
+  .add{
+    background-color: #48B439;
+    padding-bottom: 7px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 7px;
+    color: white;
+  }
 

@@ -38,17 +38,7 @@ class Categoria
         return $this->id;
     }
 
-    public function getDescripcion(): ?string
-    {
-        return $this->descripcion;
-    }
-
-    public function setDescripcion(string $descripcion): self
-    {
-        $this->descripcion = $descripcion;
-
-        return $this;
-    }
+   
 
         /**
      * @return \Traversable
@@ -82,6 +72,26 @@ class Categoria
         if ($this->getComputadoras()->contains($computadora)) {
             $this->getComputadoras()->removeElement($computadora);
         }
+
+        return $this;
+    }
+
+    /**
+     * Get the value of descripcion
+     */ 
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    /**
+     * Set the value of descripcion
+     *
+     * @return  self
+     */ 
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
 
         return $this;
     }
