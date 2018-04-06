@@ -14,20 +14,20 @@
 	     
 	  </div>
 
-	   <div class="col-md-2">
+	  <div class="col-md-2">
 	      
-	      <div class="row"><a href="{{ path('edit', { 'id': result.id }) }}" class="col-md-6 col-md-offset-3 btn btn-warning">EDITAR</a></div>
+		<div class="col-md-4"><a href="{{ path('edit', { 'id': result.id }) }}" class="boton_1 edit"><i class="fa fa-pencil-square-o" style="font: size 20px;"></i></a></div>
 
-         <div class="row"><a href="{{ path('mas', { 'id': result.id }) }}" class="col-md-6 col-md-offset-3 btn btn-info">VER MAS</a></div>
-	  
+	   <div class="col-md-4"><a href="{{ path('mas', { 'id': result.id }) }}" class="boton_1 info"><i class="fa fa-info-circle" style="font: size 20px;"></i></a></div>
 	
-	       <!--<div class="row"> <button type="button" class="col-md-6 col-md-offset-3 btn btn-info">VER MAS</button></div>-->
+  
+		 <!--<div class="row"> <button type="button" class="btn btn-info">VER MAS</button></div>-->
 
-	      <div class="row"> <button type="button" class="col-md-6 col-md-offset-3 btn btn-danger eliminar" data-id="{{ result.id }}">ELIMINAR</button></div>
-	     
-	      
-	      
-	   </div>
+		<div class="col-md-4"> <a class="boton_1 eliminar delete" data-id="{{ result.id }}"><i class="fa fa-times-circle-o" style="font: size 20px;"></i></a></div>
+	   
+		
+		
+	 </div>
 
 
 	 </div>

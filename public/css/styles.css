@@ -1,5 +1,5 @@
 .contenido{
-
+  font-family: "Times New Roman", Times, serif;
 	margin-top: 2%;
 }
 
@@ -16,6 +16,18 @@
 	color: white;
 
 
+}
+
+#ItemList{
+  justify-content: space-evenly;
+
+}
+
+.rowitem{
+
+  padding-top: 2%;
+  padding-bottom: 2%;
+  
 }
 
 .boton_1{

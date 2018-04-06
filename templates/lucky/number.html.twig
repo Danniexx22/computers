@@ -49,20 +49,20 @@
 	     <div class="col-md-2">{{ result.marca }}</div>
 	     <div class="col-md-2">{{ result.modelo }}</div>
 	     <div class="col-md-2">{{ result.codigo }}</div>
-       <div class="col-md-2">{{ result.categoria }}</div>
+         <div class="col-md-2">{{ result.categoria }}</div>
 	     
 	  </div>
 
-	   <div class="col-md-2">
+	   		<div class="col-md-2">
 	      
-	      <div class="col-md-4"><a href="{{ path('edit', { 'id': result.id }) }}" class="boton_1 edit"><i class="fa fa-pencil-square-o" style="font: size 20px;"></i></a></div>
+	     		 <div class="col-md-4"><a href="{{ path('edit', { 'id': result.id }) }}" class="boton_1 edit"><i class="fa fa-pencil-square-o" style="font: size 20px;"></i></a></div>
 
-         <div class="col-md-4"><a href="{{ path('mas', { 'id': result.id }) }}" class="boton_1 info"><i class="fa fa-info-circle" style="font: size 20px;"></i></a></div>
+		         <div class="col-md-4"><a href="{{ path('mas', { 'id': result.id }) }}" class="boton_1 info"><i class="fa fa-info-circle" style="font: size 20px;"></i></a></div>
 	  
 	
 	       <!--<div class="row"> <button type="button" class="btn btn-info">VER MAS</button></div>-->
 
-	      <div class="col-md-4"> <a class="boton_1 eliminar delete" data-id="{{ result.id }}"><i class="fa fa-times-circle-o" style="font: size 20px;"></i></a></div>
+	    	      <div class="col-md-4"> <a class="boton_1 eliminar delete" data-id="{{ result.id }}"><i class="fa fa-times-circle-o" style="font: size 20px;"></i></a></div>
 	     
 	      
 	      
@@ -73,11 +73,9 @@
 
 {% else %}
 	
-	<div class="rowitem text-center">
+	 <div class="rowitem text-center">
 	  
-	   <div class="infoitem col-md-10">
-			Sin resultadps.	     
-	  </div>
+	   <div class="infoitem col-md-10">Sin resultados.</div>
 
 	 </div>
 
