@@ -1,13 +1,10 @@
 .contenido{
   font-family: "Times New Roman", Times, serif;
-	margin-top: 2%;
+	
 }
 
-.tags{
-	
-	margin-top: 2%;
-	background-color:  #0D212C;
-	color: white; 
+.allcontent{
+  margin-top: 2%;  
 }
 
 #headerpane{
@@ -18,10 +15,7 @@
 
 }
 
-#ItemList{
-  justify-content: space-evenly;
 
-}
 
 .rowitem{
 
