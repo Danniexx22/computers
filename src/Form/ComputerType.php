@@ -17,6 +17,20 @@ class ComputerType extends AbstractType
             ->add('modelo')
             ->add('codigo')
             ->add('categoria')
+            ->add('unidad')
+            ->add('ip')
+            ->add('marcamonitor')
+            ->add('seriemonitor')
+            ->add('usuariogenerico')
+            ->add('noinventario')
+            ->add('anioadquisicion')
+            ->add('dominio')
+            ->add('cantidadusuarios')
+            ->add('idnodo')
+            ->add('origen')
+            ->add('piso')
+            ->add('tipoconsultorio')
+            ->add('area')
         ;
     }
 

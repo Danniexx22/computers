@@ -19,7 +19,12 @@
        <div class="col-md-2">{{ computer.serie }}</div>
        <div class="col-md-2">{{ computer.marca }}</div>
        <div class="col-md-2">{{ computer.modelo }}</div>
+       <div class="col-md-2">{{ computer.modelo.getRam() }}</div>
+       <div class="col-md-2">{{ computer.modelo.getHardDisk() }}</div>
+       <div class="col-md-2">{{ computer.modelo.getProcesor() }}</div>
        <div class="col-md-2">{{ computer.codigo }}</div>
+       <div class="col-md-2">{{ computer.unidad }}</div>
+       <div class="col-md-2">{{ computer.unidad.getAddress() }}</div>
 
        </div>
 </div>

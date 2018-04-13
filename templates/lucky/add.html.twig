@@ -28,47 +28,132 @@
 
 
   {{ form_start(form) }}
-
-    <div class="form-group">
-      <label for="serie">Serie:</label>
-       {{ form_widget(form.serie, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
-    </div>
-     
-     <div class="form-group">
-      <label for="marca">Marca:</label>
-       {{ form_widget(form.marca, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
-    
-    </div>
-    <div class="form-group">
-      <label for="modelo">Modelo:</label>
-       {{ form_widget(form.modelo, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
-   
-    </div>
-<div class="row">
-
-  <div class="detalles col-md-8 col-md-offset-2">
-
-    <div class="col-md-3">ram</div>
-    <div class="col-md-3">hh</div>
-    <div class="col-md-3">pro</div>
   
+  <div class="w3-padding-16 w3-panel w3-card-2 w3-container w3-margin  w3-dark-grey w3-hover-light-blue" data-toggle="collapse" data-target="#s1"><div class="col-md-11"><span><i class="fa fa-angle-double-down" style="font-size:24px"></i></span> Datos del Equipo</div></div>
+  <div id="s1" class="collapse" >
+    <div class="col-md-6">
+
+        <div class="input-group w3-container w3-margin-bottom">
+            <span class="input-group-addon">Serie</span>
+             {{ form_widget(form.serie, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+           
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Marca</span>
+             {{ form_widget(form.marca, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          
+          </div>
+         
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Modelo</span>
+             {{ form_widget(form.modelo, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+         
+          </div>
+      <div class="row w3-container w3-margin-bottom">
+      
+        <div class="detalles col-md-8 col-md-offset-2">
+      
+          <div class="col-md-3">ram</div>
+          <div class="col-md-3">hh</div>
+          <div class="col-md-3">pro</div>
+        
+        </div>
+      </div>
+          
+           
+          
+      <div class="input-group w3-container w3-margin-bottom">
+          <span class="input-group-addon">Codigo</span>
+             {{ form_widget(form.codigo, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Categoria</span>
+             {{ form_widget(form.categoria, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Unidad</span>
+             {{ form_widget(form.unidad, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">IP</span>
+             {{ form_widget(form.ip, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Marca del Monitor</span>
+             {{ form_widget(form.marcamonitor, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Serie del monitor</span>
+             {{ form_widget(form.seriemonitor, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+
+    </div>
+    <div class="col-md-6">
+
+        <div class="input-group w3-container w3-margin-bottom">
+            <span class="input-group-addon">Usuario Generico</span>
+             {{ form_widget(form.usuariogenerico, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Numero de Inventario</span>
+             {{ form_widget(form.noinventario, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Año de Adquisicion</span>
+             {{ form_widget(form.anioadquisicion, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Dominio</span>
+             {{ form_widget(form.dominio, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Cantidad de Usuarios</span>
+             {{ form_widget(form.cantidadusuarios, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">ID Nodo</span>
+             {{ form_widget(form.idnodo, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Origen</span>
+             {{ form_widget(form.origen, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Piso</span>
+             {{ form_widget(form.piso, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+      
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Tipo de Consultorio</span>
+             {{ form_widget(form.tipoconsultorio, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+            
+          <div class="input-group w3-container w3-margin-bottom">
+              <span class="input-group-addon">Area</span>
+             {{ form_widget(form.area, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
+          </div>
+
+
+    </div>
+
+   
+
+   
+
+
+    
   </div>
-</div>
-    
-     
-    
-    <div class="form-group">
-      <label for="codigo">Codigo:</label>
-       {{ form_widget(form.codigo, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
-    </div>
-
-    <div class="form-group">
-      <label for="categoria">Categoria:</label>
-       {{ form_widget(form.categoria, { 'attr': { 'class': 'form-control input-sm', 'autocomplete': 'off' } }) }}
-    </div>
-
-    
-
 
 
    
@@ -80,5 +165,14 @@
 
 </div>
 
+{% endblock %}
+{% block javascripts %}
+	<script>
+        $(document).ready(function() {
+
+          
+
+        });
+    </script>
 {% endblock %}
 
