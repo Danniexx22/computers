@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Jefatura{% endblock %}
+
+{% block body %}
+    <h1>Edit Jefatura</h1>
+
+    {{ include('jefatura/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('jefatura_index') }}">back to list</a>
+
+    {{ include('jefatura/_delete_form.html.twig') }}
+{% endblock %}

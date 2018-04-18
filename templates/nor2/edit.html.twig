@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Nor2{% endblock %}
+
+{% block body %}
+    <h1>Edit Nor2</h1>
+
+    {{ include('nor2/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('nor2_index') }}">back to list</a>
+
+    {{ include('nor2/_delete_form.html.twig') }}
+{% endblock %}

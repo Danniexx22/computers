@@ -54,6 +54,15 @@ class ModeloController extends Controller
         return $this->render('modelo/show.html.twig', ['modelo' => $modelo]);
     }
 
+
+    /**
+     * @Route("/{id}/showone")
+     */
+    public function showone(Modelo $modelo): Response
+    {
+        return $this->render('modelo/showone.html.twig', ['modelo' => $modelo]);
+    }
+
     /**
      * @Route("/{id}/edit", name="modelo_edit", methods="GET|POST")
      */

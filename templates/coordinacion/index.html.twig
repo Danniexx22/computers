@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coordinacion index{% endblock %}
+
+{% block body %}
+    <h1>Coordinacion index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripcion</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coordinacion in coordinacions %}
+            <tr>
+                <td>{{ coordinacion.id }}</td>
+                <td>{{ coordinacion.descripcion }}</td>
+                <td>
+                    <a href="{{ path('coordinacion_show', {'id': coordinacion.id}) }}">show</a>
+                    <a href="{{ path('coordinacion_edit', {'id': coordinacion.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('coordinacion_new') }}">Create new</a>
+{% endblock %}

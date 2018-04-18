@@ -180,6 +180,134 @@ class Computer
     private $area;
 
 
+
+    //Datos del responsable
+    
+    /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     *
+     *@var string
+     */
+    private $nombres;
+
+
+     /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     *
+     *@var string
+     */
+    private $paterno;
+
+     /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     *
+     *@var string
+     */
+    private $materno;
+
+     /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     *
+     *@var string
+     */
+    private $email;
+
+     /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     *
+     *@var string
+     */
+    private $matricula;
+
+
+    //Datos de la unidad
+    
+     /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     *
+     *@var string
+     */
+    private $delegacion;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Nor1", inversedBy="computadoras")
+     * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank()
+     *
+     *@var mixed
+     */
+    private $nor1;
+
+    
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Nor2", inversedBy="computadoras")
+     * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank()
+     *
+     *@var mixed
+     */
+    private $nor2;
+
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Jefatura", inversedBy="computadoras")
+     * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank()
+     *
+     *@var mixed
+     */
+    private $jefserv;
+
+    
+      
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Coordinacion", inversedBy="computadoras")
+     * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank()
+     *
+     *@var mixed
+     */
+    private $coordept;
+
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Norm", inversedBy="computadoras")
+     * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank()
+     *
+     *@var mixed
+     */
+    private $norm;
+
+    
+     /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     *
+     *@var string
+     */
+    private $tinmueble;
+
+    
+     /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank()
+     *
+     *@var string
+     */
+    private $noinmueble;
+
+
+
+
+
     
 public function getId()
 {
@@ -546,5 +674,277 @@ public function setSerie($serie)
 
         return $this;
     }
+
+    /**
+     * Get the value of nombres
+     */ 
+    public function getNombres()
+    {
+        return $this->nombres;
+    }
+
+   
+
+    /**
+     * Set the value of nombres
+     *
+     * @return  self
+     */ 
+    public function setNombres($nombres)
+    {
+        $this->nombres = $nombres;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of paterno
+     */ 
+    public function getPaterno()
+    {
+        return $this->paterno;
+    }
+
+    /**
+     * Set the value of paterno
+     *
+     * @return  self
+     */ 
+    public function setPaterno($paterno)
+    {
+        $this->paterno = $paterno;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of materno
+     */ 
+    public function getMaterno()
+    {
+        return $this->materno;
+    }
+
+    /**
+     * Set the value of materno
+     *
+     * @return  self
+     */ 
+    public function setMaterno($materno)
+    {
+        $this->materno = $materno;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of email
+     */ 
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set the value of email
+     *
+     * @return  self
+     */ 
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of matricula
+     */ 
+    public function getMatricula()
+    {
+        return $this->matricula;
+    }
+
+    /**
+     * Set the value of matricula
+     *
+     * @return  self
+     */ 
+    public function setMatricula($matricula)
+    {
+        $this->matricula = $matricula;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of delegacion
+     */ 
+    public function getDelegacion()
+    {
+        return $this->delegacion;
+    }
+
+    /**
+     * Set the value of delegacion
+     *
+     * @return  self
+     */ 
+    public function setDelegacion($delegacion)
+    {
+        $this->delegacion = $delegacion;
+
+        return $this;
+    }
+
+   
+
+    /**
+     * Get the value of nor2
+     */ 
+    public function getNor2()
+    {
+        return $this->nor2;
+    }
+
+    /**
+     * Set the value of nor2
+     *
+     * @return  self
+     */ 
+    public function setNor2(Nor2 $nor2)
+    {
+        $this->nor2 = $nor2;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of jefserv
+     */ 
+    public function getJefserv()
+    {
+        return $this->jefserv;
+    }
+
+    /**
+     * Set the value of jefserv
+     *
+     * @return  self
+     */ 
+    public function setJefserv(Jefatura $jefserv)
+    {
+        $this->jefserv = $jefserv;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of coordept
+     */ 
+    public function getCoordept()
+    {
+        return $this->coordept;
+    }
+
+    /**
+     * Set the value of coordept
+     *
+     * @return  self
+     */ 
+    public function setCoordept(Coordinacion $coordept)
+    {
+        $this->coordept = $coordept;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of norm
+     */ 
+    public function getNorm()
+    {
+        return $this->norm;
+    }
+
+    /**
+     * Set the value of norm
+     *
+     * @return  self
+     */ 
+    public function setNorm(Norm $norm)
+    {
+        $this->norm = $norm;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of tinmueble
+     */ 
+    public function getTinmueble()
+    {
+        return $this->tinmueble;
+    }
+
+    /**
+     * Set the value of tinmueble
+     *
+     * @return  self
+     */ 
+    public function setTinmueble($tinmueble)
+    {
+        $this->tinmueble = $tinmueble;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of noinmueble
+     */ 
+    public function getNoinmueble()
+    {
+        return $this->noinmueble;
+    }
+
+    /**
+     * Set the value of noinmueble
+     *
+     * @return  self
+     */ 
+    public function setNoinmueble($noinmueble)
+    {
+        $this->noinmueble = $noinmueble;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of nor1
+     */ 
+    public function getNor1()
+    {
+        return $this->nor1;
+    }
+
+    /**
+     * Set the value of nor1
+     *
+     * @return  self
+     */ 
+    public function setNor1(Nor1 $nor1)
+    {
+        $this->nor1 = $nor1;
+
+        return $this;
+    }
 }
 
+
+
+
+
+
+
+
+ 

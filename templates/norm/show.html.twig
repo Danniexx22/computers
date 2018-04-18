@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Norm{% endblock %}
+
+{% block body %}
+    <h1>Norm</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ norm.id }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ norm.descripcion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('norm_index') }}">back to list</a>
+
+    <a href="{{ path('norm_edit', {'id': norm.id}) }}">edit</a>
+
+    {{ include('norm/_delete_form.html.twig') }}
+{% endblock %}

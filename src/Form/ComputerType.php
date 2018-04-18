@@ -31,6 +31,19 @@ class ComputerType extends AbstractType
             ->add('piso')
             ->add('tipoconsultorio')
             ->add('area')
+            ->add('nombres')
+            ->add('paterno')
+            ->add('materno')
+            ->add('email')
+            ->add('matricula')
+            ->add('delegacion')
+            ->add('nor1')
+            ->add('nor2')
+            ->add('jefserv')
+            ->add('coordept')
+            ->add('norm')
+            ->add('tinmueble')
+            ->add('noinmueble')
         ;
     }
 

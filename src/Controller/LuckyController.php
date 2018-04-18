@@ -104,7 +104,7 @@ class LuckyController extends Controller
         return new JsonResponse(['ok' => true]);
     }
 
-
+    
 
     /**
      * @Route("/{id}/edit", requirements={"id": "\d+"}, name="edit")

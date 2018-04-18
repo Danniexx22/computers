@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Jefatura{% endblock %}
+
+{% block body %}
+    <h1>Create new Jefatura</h1>
+
+    {{ include('jefatura/_form.html.twig') }}
+
+    <a href="{{ path('jefatura_index') }}">back to list</a>
+{% endblock %}

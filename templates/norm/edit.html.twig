@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Norm{% endblock %}
+
+{% block body %}
+    <h1>Edit Norm</h1>
+
+    {{ include('norm/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('norm_index') }}">back to list</a>
+
+    {{ include('norm/_delete_form.html.twig') }}
+{% endblock %}

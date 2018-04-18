@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Coordinacion{% endblock %}
+
+{% block body %}
+    <h1>Create new Coordinacion</h1>
+
+    {{ include('coordinacion/_form.html.twig') }}
+
+    <a href="{{ path('coordinacion_index') }}">back to list</a>
+{% endblock %}
