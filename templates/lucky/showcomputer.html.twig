@@ -16,8 +16,6 @@
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Disco Duro:</div> <div class="col-md-8">{{ computer.modelo.getHardDisk() }}</div> </div>
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Procesador:</div> <div class="col-md-8">{{ computer.modelo.getProcesor() }}</div> </div>
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Codigo:</div> <div class="col-md-8">{{ computer.codigo }}</div> </div>
-       <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Unidad:</div> <div class="col-md-8">{{ computer.unidad }}</div> </div>
-       <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Direccion:</div> <div class="col-md-8">{{ computer.unidad.getAddress() }}</div> </div>
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Direccion ip:</div> <div class="col-md-8">{{ computer.ip }}</div> </div>
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Marca del Monitor:</div> <div class="col-md-8">{{ computer.marcamonitor }}</div> </div>
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Serie del Monitor:</div> <div class="col-md-8">{{ computer.seriemonitor }}</div> </div>
@@ -28,11 +26,30 @@
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Cantidad de usuarios:</div> <div class="col-md-8">{{ computer.cantidadusuarios }}</div> </div>
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Id del Nodo:</div> <div class="col-md-8">{{ computer.idnodo }}</div> </div>
        <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Origen:</div> <div class="col-md-8">{{ computer.origen }}</div> </div>
-       <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Piso:</div> <div class="col-md-8">{{ computer.piso }}</div> </div>
-       <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Tipo de Consultorio:</div> <div class="col-md-8">{{ computer.tipoconsultorio }}</div> </div>
-       <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Area:</div> <div class="col-md-8">{{ computer.area }}</div> </div>
         
  </div>
+
+ <div class="col-md-4 ubicacion">
+    <div class="row w3-container w3-teal">Ubicacion</div>
+   <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Unidad:</div> <div class="col-md-8">{{ computer.unidad }}</div> </div>
+   <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Direccion:</div> <div class="col-md-8">{{ computer.unidad.getAddress() }}</div> </div>
+   
+   <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Piso:</div> <div class="col-md-8">{{ computer.piso }}</div> </div>
+   <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Tipo de Consultorio:</div> <div class="col-md-8">{{ computer.tipoconsultorio }}</div> </div>
+   <div class="row"> <div class="col-md-4 w3-container w3-blue-grey"> Area:</div> <div class="col-md-8">{{ computer.area }}</div> </div>
+   
+
+    <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Delegacion:</div><div class="col-md-8">{{ computer.delegacion    }}</div></div>
+    <div class="row"><div class="col-md-4 w3 container w3-blue-grey">NOR1:</div><div class="col-md-8">{{ computer.nor1  }}</div></div>
+    <div class="row"><div class="col-md-4 w3 container w3-blue-grey">NOR2:</div><div class="col-md-8">{{ computer.nor2  }}</div></div>
+    <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Jefatura:</div><div class="col-md-8">{{ computer.jefserv   }}</div></div>
+    <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Corrdinacion:</div><div class="col-md-8">{{ computer.coordept  }}</div></div>
+    <div class="row"><div class="col-md-4 w3 container w3-blue-grey">NORM:</div><div class="col-md-8">{{ computer.norm  }}</div></div>
+    <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Tipo de Inmueble:</div><div class="col-md-8">{{ computer.tinmueble }}</div></div>
+    <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Numero de Inmueble:</div><div class="col-md-8">{{ computer.noinmueble    }}</div></div>
+    
+
+</div>
 
     <div class="col-md-4 responsable">
         <div class="row w3-container w3-teal">Responsable</div>
@@ -46,20 +63,7 @@
 
     </div>
       
-    <div class="col-md-4 ubicacion">
-        <div class="row w3-container w3-teal">Ubicacion</div>
-
-        <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Delegacion:</div><div class="col-md-8">{{ computer.delegacion    }}</div></div>
-        <div class="row"><div class="col-md-4 w3 container w3-blue-grey">NOR1:</div><div class="col-md-8">{{ computer.nor1  }}</div></div>
-        <div class="row"><div class="col-md-4 w3 container w3-blue-grey">NOR2:</div><div class="col-md-8">{{ computer.nor2  }}</div></div>
-        <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Jefatura:</div><div class="col-md-8">{{ computer.jefserv   }}</div></div>
-        <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Corrdinacion:</div><div class="col-md-8">{{ computer.coordept  }}</div></div>
-        <div class="row"><div class="col-md-4 w3 container w3-blue-grey">NORM:</div><div class="col-md-8">{{ computer.norm  }}</div></div>
-        <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Tipo de Inmueble:</div><div class="col-md-8">{{ computer.tinmueble }}</div></div>
-        <div class="row"><div class="col-md-4 w3 container w3-blue-grey">Numero de Inmueble:</div><div class="col-md-8">{{ computer.noinmueble    }}</div></div>
-        
-
-    </div>
+  
 
 </div>
 </div>
